@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
-  belongs_to :user
-  belongs_to :dish
+  belongs_to :user, required: false
+  belongs_to :dish, required: false
 end

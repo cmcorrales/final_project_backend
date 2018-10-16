@@ -1,9 +1,12 @@
 class Api::V1::MenusController < ApplicationController
-  before_action :find_menu, only: [:update]
+  before_action :find_menu, only: [:update, :show]
 
   def index
     @menues = Menu.all
     render json: @menus
+  end
+
+  def show
   end
 
   def update

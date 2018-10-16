@@ -1,13 +1,16 @@
 class Api::V1::RestaurantsController < ApplicationController
-  before_action :find_restaurant, only: [:update]
+  before_action :find_user, only: [:update, :show]
 
   def index
     @restaurants = Restaurant.all
     render json: @restaurants
   end
 
+  def show
+  end
+
   def update
-    @restaurant.update(restaurant_params)
+    @restaurant.update(user_params)
     if @restaurant.save
       render json: @restaurant, status: :accepted
     else
@@ -17,8 +20,8 @@ class Api::V1::RestaurantsController < ApplicationController
 
   private
 
-    def restaurant_params
-      params.permit(:user_id, :name)
+    def user_params
+      params.permit(:name, :user_id)
     end
 
     def find_restaurant

@@ -1,9 +1,12 @@
 class Api::V1::DishesController < ApplicationController
-  before_action :find_dish, only: [:update]
+  before_action :find_dish, only: [:update, :show]
 
   def index
     @dishes = Dish.all
     render json: @dishes
+  end
+
+  def show
   end
 
   def update
