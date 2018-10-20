@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_224143) do
+ActiveRecord::Schema.define(version: 2018_10_19_195258) do
 
   create_table "dishes", force: :cascade do |t|
     t.integer "menu_id"
@@ -40,6 +40,18 @@ ActiveRecord::Schema.define(version: 2018_10_10_224143) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "more_salty"
+    t.boolean "less_salty"
+    t.boolean "more_spicy"
+    t.boolean "less_spicy"
+    t.boolean "more_sweet"
+    t.boolean "less_sweet"
+    t.boolean "neutral_spicy"
+    t.boolean "neutral_sweet"
+    t.boolean "neutral_salty"
+    t.boolean "neutral_portion"
+    t.boolean "more_portion"
+    t.boolean "less_portion"
   end
 
   create_table "users", force: :cascade do |t|

@@ -9,6 +9,15 @@ class Api::V1::UsersController < ApplicationController
   def show
   end
 
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.create(user_params)
+    render json: @user, status: 201
+  end
+
   def update
     @user.update(user_params)
     if @user.save

@@ -30,7 +30,7 @@ class Api::V1::ReviewsController < ApplicationController
   private
 
     def review_params
-      params.permit(:rating, :description, :dish_id, :user_id)
+      params.permit(:rating, :description, :dish_id, :user_id, :more_salty, :less_salty, :more_spicy, :less_spicy, :more_sweet)
     end
 
     def find_review
