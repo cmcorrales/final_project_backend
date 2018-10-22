@@ -9,6 +9,15 @@ class Api::V1::RestaurantsController < ApplicationController
   def show
   end
 
+  def new
+    @restaurant = Restaurant.new
+  end
+
+  def create
+    @restaurant = Restaurant.create(restaurant_params)
+    render json: @restaurant, status: 201
+  end
+
   def update
     @restaurant.update(user_params)
     if @restaurant.save
@@ -20,7 +29,7 @@ class Api::V1::RestaurantsController < ApplicationController
 
   private
 
-    def user_params
+    def restaurant_params
       params.permit(:name, :user_id)
     end
 

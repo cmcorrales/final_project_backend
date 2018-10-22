@@ -1,5 +1,5 @@
 class RestaurantSerializer < ActiveModel::Serializer
   belongs_to :user
-  has_many :menus
-  attributes :id, :name, :menus
+  has_many :dishes
+  attributes :id, :name
 end

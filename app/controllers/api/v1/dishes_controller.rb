@@ -9,6 +9,15 @@ class Api::V1::DishesController < ApplicationController
   def show
   end
 
+  def new
+    @dish = Dish.new
+  end
+
+  def create
+    @dish = Dish.create(dish_params)
+    render json: @dish, status: 201
+  end
+
   def update
     @dish.update(dish_params)
     if @dish.save
@@ -21,7 +30,7 @@ class Api::V1::DishesController < ApplicationController
   private
 
     def dish_params
-      params.permit(:name, :menu_id)
+      params.permit(:name, :restaurant_id)
     end
 
     def find_dish

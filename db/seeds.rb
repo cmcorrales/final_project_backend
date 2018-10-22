@@ -30,19 +30,19 @@
 # UserMenu.create(menu_id:9, user_id:1)
 # UserMenu.create(menu_id:10, user_id:10)
 #
-# 5.times do
-#   Dish.create(name: Faker::Food.dish, menu_id: 1)
-#   Dish.create(name: Faker::Food.dish, menu_id: 2)
-#   Dish.create(name: Faker::Food.dish, menu_id: 3)
-#   Dish.create(name: Faker::Food.dish, menu_id: 4)
-#   Dish.create(name: Faker::Food.dish, menu_id: 5)
-#   Dish.create(name: Faker::Food.dish, menu_id: 6)
-#   Dish.create(name: Faker::Food.dish, menu_id: 7)
-#   Dish.create(name: Faker::Food.dish, menu_id: 8)
-#   Dish.create(name: Faker::Food.dish, menu_id: 9)
-#   Dish.create(name: Faker::Food.dish, menu_id: 10)
-# end
-#
+5.times do
+  Dish.create(name: Faker::Food.dish, restaurant_id: 1)
+  Dish.create(name: Faker::Food.dish, restaurant_id: 2)
+  Dish.create(name: Faker::Food.dish, restaurant_id: 3)
+  Dish.create(name: Faker::Food.dish, restaurant_id: 4)
+  # Dish.create(name: Faker::Food.dish, restaurant_id: 5)
+  # Dish.create(name: Faker::Food.dish, restaurant_id: 6)
+  # Dish.create(name: Faker::Food.dish, restaurant_id: 7)
+  # Dish.create(name: Faker::Food.dish, restaurant_id: 8)
+  # Dish.create(name: Faker::Food.dish, restaurant_id: 9)
+  # Dish.create(name: Faker::Food.dish, restaurant_id: 10)
+end
+
 # 5.times do
 #   Review.create(rating: rand(1...5), dish_id: 1, description: Faker::Food.description)
 #   Review.create(rating: rand(1...5), dish_id: 2, description: Faker::Food.description)

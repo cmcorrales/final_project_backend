@@ -1,4 +1,4 @@
 class Dish < ApplicationRecord
-  belongs_to :menu, required: false
+  belongs_to :restaurant
   has_many :reviews
 end
